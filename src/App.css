@@ -1,3 +1,7 @@
+body {
+  font-size: 14px;
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +30,55 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.blink {
+  animation: blink 1.5s steps(2, end) infinite;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  scroll-margin: 2em;
+  margin: 2em 1em 3em;
+  border: 3px solid #333;
+  padding: .5em;
+}
+
+.card--snap {
+  border-color: rgb(232, 231, 195);
+}
+
+.card--progressing {
+  border-color: rgb(255, 50, 50);
+  
+}
+
+.card--solved {
+  border-color: rgba(0, 0, 0, 0.475);
+  
+}
+
+.card-heading {
+  font-size: 1.2rem;
+  /* text-transform: uppercase; */
+  padding: 0 .5em;
+  position: absolute;
+  margin-left: -.5em;
+  margin-top: -1.4em;
+  background: white;
+}
+
+@keyframes blink {
+  from {
+    color: transparent;
+  }
+  to {
+    color: #282c34;
+  }
 }
 
 @keyframes App-logo-spin {
