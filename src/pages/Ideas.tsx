@@ -24,12 +24,10 @@ const renderCards = (cards: CardProps[]) => {
 
 const data: CardProps[] = [
   { title: 'Personal Blog', description: 'A personal blog', status: 'progressing'  },
-  { title: 'Personal Blog', description: 'A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,A personal blog,', status: 'progressing'  },
   { title: 'Little Parser', description: 'A little parser that could simply parse lisp syntax, and provide execution!', status: 'snap'  },
   { title: 'Little Hearth Stone', description: 'Game mock of Hearth Stone. I aways wanna try to play hearth stone without purchased new card to play the new sesason, hopely this would not be a dream soon', status: 'snap'  },
   { title: 'Little Vuex', description: 'Wrapper of vuex', status: 'snap' },
-  { title: 'Little Vuex', description: 'Wrapper of vuex', status: 'snap' },
-
+  { title: 'Little Chat', description: 'Chatting up with my adorable room mate', status: 'snap' },
 ]
 
 class Ideas extends Component {

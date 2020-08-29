@@ -25,7 +25,7 @@ const renderTimelines = (timelines: ITimeline[]) =>
 
 const data = [
   { date: new Date('2020 05 20'), descriptions: '到达上海'},
-  { date: new Date('2020 05 25'), descriptions: '林说我没经过社会毒打，然后被其炒鱿鱼，第二次收到我心高气傲这个评价，或许我该注意一下了' },
+  { date: new Date('2020 05 25'), descriptions: 'Boss说我没经过社会毒打，然后被其炒鱿鱼，第二次收到我心高气傲这个评价，或许我该注意一下了' },
   { date: new Date('2020-06-01'), descriptions: '准备搬走被舍友煮的饭感动，准备留在上海找工作。开始了 Topcoder' },
   { date: new Date('2020-06-08'), descriptions: [
     'Topcoder 两个项目都失败了。由于没有把时间放社区上，社区工作也停止了。',
@@ -34,7 +34,7 @@ const data = [
     // '想起了白白，30岁却又像个小女孩。与舍友产生矛盾小心翼翼，要搬家了总会忧虑重重。喜欢安稳的生活的一个女生'
   ] },
   { date: new Date('2020 08 7'), descriptions: '隔了三天才看到来自 LeetCode 的拒信，经验不匹配，说明我的技术水平有点菜呀。。' },
-  { date: new Date('2020 08 12'), descriptions: '被迫加入驰链，开始开发 Planet-Slash' },
+  // { date: new Date('2020 08 12'), descriptions: '被迫加入驰链，开始开发 Planet-Slash' },
 ]
 
 export default function Timeline() {
