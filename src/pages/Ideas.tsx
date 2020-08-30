@@ -28,6 +28,7 @@ const data: CardProps[] = [
   { title: 'Little Hearth Stone', description: 'Game mock of Hearth Stone. I aways wanna try to play hearth stone without purchased new card to play the new sesason, hopely this would not be a dream soon', status: 'snap'  },
   { title: 'Little Vuex', description: 'Wrapper of vuex', status: 'snap' },
   { title: 'Little Chat', description: 'Chatting up with my adorable room mate', status: 'snap' },
+  { title: 'Little File Sharing', description: 'Local Network File Sharing is a mass', status: 'snap' },
 ]
 
 class Ideas extends Component {
