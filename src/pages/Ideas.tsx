@@ -35,7 +35,7 @@ class Ideas extends Component {
     return (
       <div>
         <h1>Ideas</h1>
-        <p>I aways have some ideas bubble through my mind, I want to implement them, catch them before the meteor fall out of sign, before the end of my life.</p>
+        <p>I always have some ideas bubble through my mind, I want to implement them, catch them before the meteor fall out of sign, before the end of my life.</p>
         <main className="card-list">
           {renderCards(data)}
         </main>

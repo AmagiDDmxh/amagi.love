@@ -34,6 +34,8 @@ const data = [
     // '想起了白白，30岁却又像个小女孩。与舍友产生矛盾小心翼翼，要搬家了总会忧虑重重。喜欢安稳的生活的一个女生'
   ] },
   { date: new Date('2020 08 7'), descriptions: '隔了三天才看到来自 LeetCode 的拒信，经验不匹配，说明我的技术水平有点菜呀。。' },
+  { date: new Date('2020 08 11'), descriptions: '到底还是找到并开始工作了，加油吧' },
+  { date: new Date('2020 09 01'), descriptions: 'npm registry 真是让人头疼' },
   // { date: new Date('2020 08 26'), descriptions: '开始研究交易机器人' },
   // { date: new Date('2020 08 12'), descriptions: '被迫加入驰链，开始开发 Planet-Slash' },
 ]
