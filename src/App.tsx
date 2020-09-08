@@ -4,13 +4,13 @@ import Header from './layouts/Header'
 import Timeline from './pages/Timeline'
 import Projects from './pages/Projects'
 import Ideas from './pages/Ideas'
+import About from './pages/About'
 import './App.css'
 
 function App() {
   return (
     <Router>
-      <Header name="aha" />
-
+      <Header name="AmagiDDmxh" />
       {/*
           A <Switch> looks through all its children <Route>
           elements and renders the first one whose path
@@ -27,6 +27,9 @@ function App() {
         </Route>
         <Route path="/ideas">
           <Ideas />
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
       </Switch>
     </Router>

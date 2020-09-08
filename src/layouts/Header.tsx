@@ -6,7 +6,7 @@ export interface Props { name: string }
 export default function Header({ name }: Props) {
   return (
     <header>
-      <h1>AmagiDDmxh</h1>
+      <h1>{name}</h1>
       <nav>
         <ul>
           <li><Link to="/">~</Link></li>
@@ -18,6 +18,7 @@ export default function Header({ name }: Props) {
           <li><Link to="/timeline">~/Timeline</Link></li>
           <li><Link to="/projects">~/Projects</Link></li>
           <li><Link to="/ideas">~/Ideas</Link></li>
+          <li><Link to="/about">~/About</Link></li>
         </ul>
       </nav>
     </header>
