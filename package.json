@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dracula/dracula-ui": "^0.7.1",
     "@sentry/react": "^6.2.3",
     "@sentry/tracing": "^6.2.3",
     "@testing-library/jest-dom": "^4.2.4",
