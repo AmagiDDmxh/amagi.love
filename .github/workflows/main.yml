@@ -31,7 +31,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            nvm use stable
             cd /home/real-blog
             git pull
+            npm install
             npm run build
