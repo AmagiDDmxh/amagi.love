@@ -2,6 +2,11 @@ body {
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 .App {
   text-align: center;
 }
@@ -62,6 +67,7 @@ body {
 .card--solved {
   border-color: rgba(0, 0, 0, 0.475);
 }
+
 
 .card-heading {
   font-size: 1.2rem;

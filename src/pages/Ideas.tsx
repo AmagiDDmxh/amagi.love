@@ -1,33 +1,12 @@
 import React, { Component } from "react";
 
-interface CardProps {
-  title: string;
-  description?: string;
-
-  status: "snap" | "progressing" | "solved";
-}
-
-const Card = ({ title, description, status }: CardProps) => (
-  <div className={`card card--${status}`}>
-    <div className="card-heading">{title}</div>
-    {description && (
-      <>
-        <div className="divider"></div>
-        <div className="content">{description}</div>
-      </>
-    )}
-  </div>
-);
-
-const renderCards = (cards: CardProps[]) => {
-  return cards.map((props) => <Card {...props} />);
-};
-
 const data: CardProps[] = [
+  // Blog with project feature
   {
     title: "Personal Blog",
     description: "A personal blog",
     status: "progressing",
+    link: "https://github.com/AmagiDDmxh/real-blog",
   },
   {
     title: "Little Parser",
@@ -41,7 +20,12 @@ const data: CardProps[] = [
       "Game mock of Hearth Stone. I aways wanna try to play hearth stone without purchased new card to play the new sesason, hopely this would not be a dream soon",
     status: "snap",
   },
-  { title: "Little Vuex", description: "Wrapper of vuex", status: "snap" },
+  {
+    title: "Little Vuex",
+    description: "Wrapper of vuex",
+    status: "progressing",
+    link: "https://github.com/AmagiDDmxh/little-vuex",
+  },
   {
     title: "Little Chat",
     description: "Chatting up with my adorable room mate",
@@ -54,18 +38,50 @@ const data: CardProps[] = [
   },
 ];
 
+interface CardProps {
+  title: string;
+  description?: string;
+  link?: string;
+  status: "snap" | "progressing" | "solved";
+}
+
+const Card = ({ title, description, status, link }: CardProps) => (
+  <a
+    className={`card ${
+      status === "snap"
+        ? "drac-border-orange"
+        : status === "progressing"
+        ? "drac-border-red"
+        : "drac-border-black"
+    }`}
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div className="card-heading">{title}</div>
+    {description && (
+      <>
+        <div className="divider"></div>
+        <div className="content">{description}</div>
+      </>
+    )}
+  </a>
+);
+
+const renderCards = (cards: CardProps[]) => {
+  return cards.map((props) => <Card {...props} />);
+};
+
 class Ideas extends Component {
   render() {
     return (
       <div>
         <h1>Ideas</h1>
         <p>
-          I always have some ideas bubble through my mind, I want to implement
-          them, catch them before the meteor fall out of sign, before the end of
-          my life.
+          I always have some ideas bubble through my mind, before the meteor fall out of sign, before the end of
+          my life, I want to catch them, and achieve them.
         </p>
         <main className="card-list">{renderCards(data)}</main>
-
         <span className="blink" style={{ fontSize: 20 }}>
           |
         </span>
