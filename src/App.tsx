@@ -7,6 +7,8 @@ import Projects from './pages/Projects'
 import Ideas from './pages/Ideas'
 import About from './pages/About'
 import './App.css'
+import '@dracula/dracula-ui/styles/dracula-ui.css'
+
 
 function App() {
   return (
