@@ -32,6 +32,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             nvm use stable
-            cd /srv/awesome/www
+            cd /home/real-blog
             git pull
             npm run build
