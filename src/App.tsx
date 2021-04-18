@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, BrowserRouter as Router, useLocation } from 'react-router-dom'
+import { Switch, Route, HashRouter as Router, useLocation } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Header from './layouts/Header'
 import Timeline from './pages/Timeline'
