@@ -34,6 +34,8 @@ body {
 
 .blink {
   animation: blink 1.5s steps(2, end) infinite;
+  animation-delay: -3s;
+  color: transparent;
 }
 
 .card-list {
@@ -59,7 +61,6 @@ body {
 
 .card--solved {
   border-color: rgba(0, 0, 0, 0.475);
-  
 }
 
 .card-heading {
@@ -77,7 +78,7 @@ body {
     color: transparent;
   }
   to {
-    color: #282c34;
+    color: #000;
   }
 }
 

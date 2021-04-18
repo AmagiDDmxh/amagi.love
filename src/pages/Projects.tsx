@@ -4,7 +4,7 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        Projects
+        <h1>Projects</h1><span className="blink" style={{ fontSize: 20}}>|</span>
       </div>
     );
   }
