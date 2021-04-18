@@ -38,14 +38,21 @@ const data = [
   { date: new Date('2020 09 01'), descriptions: 'npm registry 真是让人头疼' },
   // { date: new Date('2020 08 26'), descriptions: '开始研究交易机器人' },
   // { date: new Date('2020 08 12'), descriptions: '被迫加入驰链，开始开发 Planet-Slash' },
-]
+].reverse()
 
 export default function Timeline() {
   return (
     <>
-    <h1>Notes<span className="blink">|</span></h1>
+    <h1>Notes</h1><span className="blink" style={{ fontSize: 20}}>|</span>
     <ul>
       {renderTimelines(data)}
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </ul>
     </>
   )
