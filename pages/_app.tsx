@@ -6,10 +6,10 @@ import '@dracula/dracula-ui/styles/dracula-ui.css'
 
 const App = ({ Component, pageProps }) => {
   return (
-    <>
+    <div>
       <Header name="AmagiDDmxh" />
       <Component {...pageProps} />
-    </>
+    </div>
   )
 }
 

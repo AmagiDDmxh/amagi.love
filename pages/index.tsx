@@ -1,8 +1,10 @@
+import { Heading, Paragraph } from "@dracula/dracula-ui"
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <p>Nothings here</p>
+      <Heading color="black">Home</Heading>
+      <Paragraph color="black">Nothings here</Paragraph>
     </div>
   )
 }

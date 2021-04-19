@@ -1,3 +1,4 @@
+import { Heading, Paragraph } from "@dracula/dracula-ui";
 import React, { Component } from "react";
 
 const data: CardProps[] = [
@@ -76,11 +77,11 @@ class Ideas extends Component {
   render() {
     return (
       <div>
-        <h1>Ideas</h1>
-        <p>
+        <Heading color="black">Ideas</Heading>
+        <Paragraph color="black" size="sm">
           I always have some ideas bubble through my mind, before the meteor fall out of sign, before the end of
           my life, I want to catch them, and achieve them.
-        </p>
+        </Paragraph>
         <main className="card-list">{renderCards(data)}</main>
         <span className="blink" style={{ fontSize: 20 }}>
           |

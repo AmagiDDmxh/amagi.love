@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import { Heading } from "@dracula/dracula-ui";
 
 interface ITimeline {
   date: string | Date;
@@ -61,7 +62,7 @@ const data = [
 export default function Timeline() {
   return (
     <>
-      <h1>Notes</h1>
+      <Heading color="black">Notes</Heading>
       <ul>
         <li>
           2020-11-01 积蓄耗光没折，
