@@ -1,6 +1,5 @@
 import React from "react";
 import { Anchor } from "@dracula/dracula-ui";
-import "./Header.css";
 
 export interface Props {
   name: string;
@@ -22,22 +21,22 @@ export default function Header({}: Props) {
             </Anchor>
           </li> */}
           <li>
-            <Anchor href="/#/timeline" color="black" hoverColor="black">
+            <Anchor href="/timeline" color="black" hoverColor="black">
               ~/Timeline
             </Anchor>
           </li>
           <li>
-            <Anchor href="/#/projects" color="black" hoverColor="black">
+            <Anchor href="/projects" color="black" hoverColor="black">
               ~/Projects
             </Anchor>
           </li>
           <li>
-            <Anchor href="/#/ideas" color="black" hoverColor="black">
+            <Anchor href="/ideas" color="black" hoverColor="black">
               ~/Ideas
             </Anchor>
           </li>
           <li>
-            <Anchor href="/#/about" color="black" hoverColor="black">
+            <Anchor href="/about" color="black" hoverColor="black">
               ~/About
             </Anchor>
           </li>

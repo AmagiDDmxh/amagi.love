@@ -51,23 +51,10 @@ a {
 .card {
   scroll-margin: 2em;
   margin: 2em 1em 3em;
-  border: 3px solid #333;
+  border: 3px solid;
+  border-color: auto;
   padding: .5em;
 }
-
-.card--snap {
-  border-color: rgb(232, 231, 195);
-}
-
-.card--progressing {
-  border-color: rgb(255, 50, 50);
-  
-}
-
-.card--solved {
-  border-color: rgba(0, 0, 0, 0.475);
-}
-
 
 .card-heading {
   font-size: 1.2rem;
