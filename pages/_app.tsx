@@ -1,13 +1,23 @@
-import React from 'react'
+import { AppProps } from 'next/dist/next-server/lib/router/router'
+import useSWR from 'swr'
 
 import Header from '../layouts/Header'
+import Quote from '../components/Quote'
 import '../styles/index.css'
 import '@dracula/dracula-ui/styles/dracula-ui.css'
 
-const App = ({ Component, pageProps }) => {
+const fetcher = (...args: any[]) => fetch(args[0], ...args.slice(1)).then((res) => res.json())
+
+const App = ({ Component, pageProps }: AppProps) => {
+  const { data: quote } = useSWR('/api/quote', fetcher)
+
+  console.log(quote)
+
   return (
     <div>
       <Header name="AmagiDDmxh" />
+      {/* @ts-ignore */}
+      <Quote {...quote} />
       <Component {...pageProps} />
     </div>
   )

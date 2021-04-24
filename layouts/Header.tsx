@@ -15,11 +15,6 @@ export default function Header({}: Props) {
               ~/A
             </a>
           </li>
-          {/* <li>
-            <Anchor href="/" color="black" hoverColor="black">
-              ~
-            </Anchor>
-          </li> */}
           <li>
             <Anchor href="/timeline" color="black" hoverColor="black">
               ~/Timeline

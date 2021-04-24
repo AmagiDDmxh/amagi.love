@@ -6,3 +6,6 @@ Be myself
 
 - [ ] Project Tracking
 - [ ] Bookshelf
+- [ ] Https?
+- [x] Simple Quotes
+- [ ] Complext Quotes
