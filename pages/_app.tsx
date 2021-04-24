@@ -11,8 +11,6 @@ const fetcher = (...args: any[]) => fetch(args[0], ...args.slice(1)).then((res) 
 const App = ({ Component, pageProps }: AppProps) => {
   const { data: quote } = useSWR('/api/quote', fetcher)
 
-  console.log(quote)
-
   return (
     <div>
       <Header name="AmagiDDmxh" />
