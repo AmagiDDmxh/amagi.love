@@ -51,5 +51,10 @@ export const quotes: Prisma.QuoteCreateInput[] = [
     author: '威廉·本杰明·史密斯(W. B. Smith)',
     book: '《无穷小分析》(Infinitesimal Analysis)'
   },
+  {
+    content: "We cam't hide forever. We can run. Toghter",
+    author: '',
+    book: 'Shadow and Bone'
+  }
   // ...More
 ]
