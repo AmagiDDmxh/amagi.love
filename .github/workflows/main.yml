@@ -7,6 +7,9 @@ name: CI
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+      - "**.yml"
+      - "**.md"
   pull_request:
     branches: [ master ]
 
@@ -35,4 +38,4 @@ jobs:
             git pull
             npm install
             npm run build
-            npm start &
+            pm2 restart blog
