@@ -16,22 +16,22 @@ export default function Header({}: Props) {
             </a>
           </li>
           <li>
-            <Anchor href="/timeline" color="black" hoverColor="black">
+            <Anchor href="/timeline" className="black" hoverColor="black">
               ~/Timeline
             </Anchor>
           </li>
           <li>
-            <Anchor href="/projects" color="black" hoverColor="black">
+            <Anchor href="/projects" className="black" hoverColor="black">
               ~/Projects
             </Anchor>
           </li>
           <li>
-            <Anchor href="/ideas" color="black" hoverColor="black">
+            <Anchor href="/ideas" className="black" hoverColor="black">
               ~/Ideas
             </Anchor>
           </li>
           <li>
-            <Anchor href="/about" color="black" hoverColor="black">
+            <Anchor href="/about" className="black" hoverColor="black">
               ~/About
             </Anchor>
           </li>

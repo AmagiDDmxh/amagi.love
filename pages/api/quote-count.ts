@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../lib/prisma'
-import { randomInteger } from '../../lib/random'
 
 // GET /api/quote-count
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {

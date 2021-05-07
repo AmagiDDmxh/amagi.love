@@ -4,7 +4,6 @@ import useSWR from 'swr'
 import Header from '../layouts/Header'
 import Quote from '../components/Quote'
 import '../styles/index.css'
-import '@dracula/dracula-ui/styles/dracula-ui.css'
 
 const fetcher = (...args: any[]) => fetch(args[0], ...args.slice(1)).then((res) => res.json())
 

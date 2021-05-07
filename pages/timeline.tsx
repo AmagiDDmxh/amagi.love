@@ -62,7 +62,7 @@ const data = [
 export default function Timeline() {
   return (
     <>
-      <Heading color="black">Notes</Heading>
+      <h1 className="black">Notes</h1>
       <ul>
         <li>
           2020-11-01 积蓄耗光没折，

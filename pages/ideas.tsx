@@ -77,11 +77,11 @@ class Ideas extends Component {
   render() {
     return (
       <div>
-        <Heading color="black">Ideas</Heading>
-        <Paragraph color="black" size="sm">
+        <h1 className="black">Ideas</h1>
+        <p className="text-black text-semibold text-sm">
           I always have some ideas bubble through my mind, before the meteor fall out of sign, before the end of
           my life, I want to catch them, and achieve them.
-        </Paragraph>
+        </p>
         <main className="card-list">{renderCards(data)}</main>
         <span className="blink" style={{ fontSize: 20 }}>
           |
