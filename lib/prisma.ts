@@ -6,12 +6,11 @@ import { PrismaClient } from '@prisma/client'
 // Learn more:
 // https://pris.ly/d/help/next-js-best-practices
 
-
 // add prisma to the NodeJS global type
 interface CustomNodeJsGlobal extends NodeJS.Global {
-  prisma: PrismaClient;
+  prisma: PrismaClient
 }
-declare const global: CustomNodeJsGlobal;
+declare const global: CustomNodeJsGlobal
 
 let prisma: PrismaClient
 
