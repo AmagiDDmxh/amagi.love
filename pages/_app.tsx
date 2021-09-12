@@ -1,4 +1,4 @@
-import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { AppProps } from 'next/app'
 import useSWR from 'swr'
 
 import Header from '../layouts/Header'
@@ -12,8 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <div>
-      <Header name="AmagiDDmxh" />
-      {/* @ts-ignore */}
+      <Header />
       <Quote {...quote} />
       <Component {...pageProps} />
     </div>
@@ -21,29 +20,3 @@ const App = ({ Component, pageProps }: AppProps) => {
 }
 
 export default App
-
-// function Page() {
-//   return (
-//     <TransitionGroup>
-//       <CSSTransition key={location?.key} classNames="fade" timeout={100}>
-//         {/* <Route exact path="/timeline">
-//           <Timeline />
-//         </Route> */}
-//         <Switch location={location}>
-//           <Route exact path="/timeline">
-//             <Timeline />
-//           </Route>
-//           <Route path="/projects">
-//             <Projects />
-//           </Route>
-//           <Route path="/ideas">
-//             <Ideas />
-//           </Route>
-//           <Route path="/about">
-//             <About />
-//           </Route>
-//         </Switch>
-//       </CSSTransition>
-//     </TransitionGroup>
-//   );
-// }
