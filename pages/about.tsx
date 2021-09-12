@@ -8,7 +8,7 @@ const About = () => {
       <p className="text-black">好奇 NativeApp, 路由/中间件，服务器/数据库</p>
       <p className="text-black">好奇 非欧几何，数论分析，多变量积分，抽象代数，应用数学</p>
       <p className="text-black">好奇 哲学 好奇人类为何而活，我为什么存在</p>
-      <p className="text-black">想学 River Flows in You sunflower 卡农 moon river</p>
+      <p className="text-black">想学会吉他指弹 River Flows in You, sunflower, 卡农, moon river</p>
       <span className="blink" style={{ fontSize: 20 }}>
         |
       </span>
