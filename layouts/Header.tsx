@@ -1,39 +1,35 @@
 import React from "react";
-import { Anchor } from "@dracula/dracula-ui";
 
-export interface Props {
-  name: string;
-}
+export default function Header() {
 
-export default function Header({}: Props) {
   return (
     <header>
       <nav className="nav">
         <ul>
           <li>
             <a href="/" className="name">
-              ~/A
+              A
+            </a>
+          </li>
+          {/* <li>
+            <a href="/timeline" className="black hover:bg-black hover:text-white">
+              ~/Timeline
+            </a>
+          </li> */}
+          {/* <li>
+            <a href="/projects" className="black hover:bg-black hover:text-white">
+              ~/Projects
+            </a>
+          </li> */}
+          <li>
+            <a href="/ideas" className="black hover:bg-black hover:text-white">
+              Ideas
             </a>
           </li>
           <li>
-            <Anchor href="/timeline" className="black" hoverColor="black">
-              ~/Timeline
-            </Anchor>
-          </li>
-          <li>
-            <Anchor href="/projects" className="black" hoverColor="black">
-              ~/Projects
-            </Anchor>
-          </li>
-          <li>
-            <Anchor href="/ideas" className="black" hoverColor="black">
-              ~/Ideas
-            </Anchor>
-          </li>
-          <li>
-            <Anchor href="/about" className="black" hoverColor="black">
-              ~/About
-            </Anchor>
+            <a href="/about" className="black hover:bg-black hover:text-white">
+              About
+            </a>
           </li>
           {/* <li><a href="/">About Me</a></li>
           <li><a href="/ideas">Ideas</a></li>
