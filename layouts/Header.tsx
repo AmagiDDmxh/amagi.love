@@ -11,6 +11,21 @@ export default function Header() {
               A
             </a>
           </li>
+          <li>
+            <a href="/ideas" className="text-black hover:bg-black hover:text-white">
+              Ideas
+            </a>
+          </li>
+          <li>
+            <a href="/about" className="text-black hover:bg-black hover:text-white">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/tracker" className="text-black hover:bg-black hover:text-white">
+              Tracker
+            </a>
+          </li>
           {/* <li>
             <a href="/timeline" className="black hover:bg-black hover:text-white">
               ~/Timeline
@@ -21,16 +36,6 @@ export default function Header() {
               ~/Projects
             </a>
           </li> */}
-          <li>
-            <a href="/ideas" className="black hover:bg-black hover:text-white">
-              Ideas
-            </a>
-          </li>
-          <li>
-            <a href="/about" className="black hover:bg-black hover:text-white">
-              About
-            </a>
-          </li>
           {/* <li><a href="/">About Me</a></li>
           <li><a href="/ideas">Ideas</a></li>
           <li><a href="/diaries">Public Diary</a></li>
