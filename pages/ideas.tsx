@@ -1,6 +1,3 @@
-import { Heading, Paragraph } from "@dracula/dracula-ui";
-import React, { Component } from "react";
-
 const data: CardProps[] = [
   // Blog with project feature
   {
@@ -70,11 +67,10 @@ const Card = ({ title, description, status, link }: CardProps) => (
 );
 
 const renderCards = (cards: CardProps[]) => {
-  return cards.map((props) => <Card {...props} />);
+  return cards.map((props) => <Card key={props.title} {...props} />);
 };
 
-class Ideas extends Component {
-  render() {
+const Ideas = () => {
     return (
       <div>
         <h1 className="black">Ideas</h1>
@@ -88,7 +84,6 @@ class Ideas extends Component {
         </span>
       </div>
     );
-  }
 }
 
 export default Ideas;
