@@ -91,45 +91,46 @@ const Tracker = () => {
     const [uvData, recentAverageData, countData] = payload
     const formattedTime = format(label, 'yyyy.MM.dd')
     return (
-      <div className="flex items-start p-2 text-sm font-semibold text-white bg-orange-600">
+      <div className="space-y-1 p-2 text-sm text-black">
         {formattedTime}
-        <br />
-        ---
-        <br />
-        Comparison {uvData.value.toFixed(5)}
-        <br />
-        ---
-        <br />
-        Recent Average {recentAverageData.value.toFixed(5)}
-        <br />
-        ---
-        <br />
-        {countData && `Contribution Count ${countData.value}`}
+        <div>
+          Comparison <span className="text-xs text-purple-400">{uvData.value.toFixed(2)}</span>
+        </div>
+        <div>
+          Recent Average <span className="text-xs text-red-400">{recentAverageData.value.toFixed(2)}</span>
+        </div>
+        {countData && (
+          <div>
+            Contribution Count <span className="text-xs text-green-400">{countData.value}</span>
+          </div>
+        )}
       </div>
     )
   }
 
   return (
-    <div className="h-[600px] py-8 px-16">
+    <div className="h-[600px] py-8 pl-2 pr-8">
       {!!contribution?.data.length && (
         <CustomResponsiveContainer width="100%" height="100%">
           <ComposedChart
             data={contribution.data}
+            barGap={0}
             margin={{
               top: 5,
-              right: 30,
-              left: 20,
+              right: 0,
+              left: -30,
               bottom: 5,
             }}
           >
-            <CartesianGrid vertical={false} stroke="#aaa" strokeDasharray="5 5" />
+            {/* <CartesianGrid vertical={false} stroke="#aaa" strokeDasharray="5 5" /> */}
             <XAxis
               type="number"
               domain={calcXDomain(xTicks, contribution.data)}
               interval="preserveEnd"
               dataKey="date"
               ticks={xTicks}
-              tick={<CustomXAxisTick />}
+              tick={false}
+              stroke="transparent"
             />
             <YAxis
               scale="linear"
@@ -137,10 +138,12 @@ const Tracker = () => {
               //   (dataMin: number) => (contribution.average - Math.abs(dataMin)) * 1.2,
               //   (dataMax: number) => dataMax * 1.2,
               // ]}
+              tick={false}
               tickFormatter={formatYAxis}
+              stroke="transparent"
             />
             <Tooltip content={renderTooltip} />
-            <Legend />
+            {/* <Legend /> */}
             <ReferenceLine y={0} stroke="#000" strokeWidth={1} />
             <Bar dataKey="uv" type="monotone">
               {contribution.data.map((entry: any, index: number) => (
