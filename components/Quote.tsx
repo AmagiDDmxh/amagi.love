@@ -1,4 +1,3 @@
-import { Box, Text, TextProps } from '@dracula/dracula-ui'
 import { FC } from 'react'
 
 interface QuoteProps {

@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import { Heading } from "@dracula/dracula-ui";
 
 interface ITimeline {
   date: string | Date;
