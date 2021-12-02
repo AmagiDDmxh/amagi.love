@@ -9,7 +9,9 @@ class ADocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <title>Amagi's Home</title>
+        </Head>
         <body>
           <Main />
           <NextScript />
