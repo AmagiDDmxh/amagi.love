@@ -34,6 +34,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-transition-group": "^4.4.0",
     "autoprefixer": "^10.2.5",
+    "eslint": "^7.32.0",
     "postcss": "^8.2.13",
     "prettier": "^2.2.1",
     "prisma": "^3.0.2",
