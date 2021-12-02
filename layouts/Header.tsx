@@ -11,19 +11,19 @@ export default function Header() {
               A
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="/ideas" className="text-black hover:bg-black hover:text-white">
               Ideas
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="/about" className="text-black hover:bg-black hover:text-white">
               About
             </a>
           </li>
           <li>
-            <a href="/tracker" className="text-black hover:bg-black hover:text-white">
-              Tracker
+            <a href="/heart-beat" className="text-black hover:bg-black hover:text-white">
+              My-GitHub-Heart-Beat
             </a>
           </li>
           {/* <li>
