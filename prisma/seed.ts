@@ -2,11 +2,6 @@ import { PrismaClient, Prisma } from '@prisma/client'
 import { quotes } from './example-data'
 
 const prisma = new PrismaClient()
-
-// const bookData: Prisma.BookCreateInput[] = [
-
-// ]
-
 const quoteData: Prisma.QuoteCreateInput[] = quotes
 
 async function main() {
@@ -21,10 +16,9 @@ async function main() {
 }
 
 main()
-  .catch((e) => {
+  .then(() => prisma.$disconnect())
+  .catch(async (e) => {
     console.error(e)
-    process.exit(1)
-  })
-  .finally(async () => {
     await prisma.$disconnect()
+    process.exit(1)
   })

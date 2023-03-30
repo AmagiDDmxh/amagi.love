@@ -5,7 +5,7 @@
   "dependencies": {
     "@headlessui/react": "^1.1.1",
     "@heroicons/react": "^1.0.1",
-    "@prisma/client": "^3.0.2",
+    "@prisma/client": "^4.0.2",
     "@sentry/react": "^6.2.3",
     "@sentry/tracing": "^6.2.3",
     "classnames": "^2.3.1",
@@ -36,14 +36,18 @@
     "eslint": "^7.32.0",
     "postcss": "^8.2.13",
     "prettier": "^2.2.1",
-    "prisma": "^3.0.2",
-    "tailwindcss": "^2.1.2"
+    "prisma": "^4.0.2",
+    "tailwindcss": "^2.1.2",
+    "ts-node": "^10.9.1"
   },
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
     "prettier": "prettier '**/*.{js,json,css,scss,md}' --write"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "eslintConfig": {
     "extends": "react-app"

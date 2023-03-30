@@ -11,10 +11,6 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
   const quotes = await prisma.quote.findMany()
   const quote = quotes[randomInteger(0, quotes.length - 1)]
 
-  if (process.env.NODE_ENV === 'development') {
-    return res.json(quote)
-  }
-
   await prisma.quote.updateMany({
     where: {
       id: quote.id,
@@ -23,4 +19,6 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       viewCount: { increment: 1 },
     },
   })
+
+  return res.json(quote)
 }

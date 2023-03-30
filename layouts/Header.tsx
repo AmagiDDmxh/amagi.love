@@ -21,11 +21,11 @@ export default function Header() {
               About
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="/heart-beat" className="text-black hover:bg-black hover:text-white">
               My-GitHub-Heart-Beat
             </a>
-          </li>
+          </li> */}
           {/* <li>
             <a href="/timeline" className="black hover:bg-black hover:text-white">
               ~/Timeline
