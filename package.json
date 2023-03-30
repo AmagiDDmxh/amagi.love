@@ -8,6 +8,7 @@
     "@prisma/client": "^4.0.2",
     "@sentry/react": "^6.2.3",
     "@sentry/tracing": "^6.2.3",
+    "@vercel/edge-config": "^0.1.5",
     "classnames": "^2.3.1",
     "coingecko-api": "^1.0.10",
     "coingecko-api-v3": "^0.0.9",
@@ -44,7 +45,9 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "prettier": "prettier '**/*.{js,json,css,scss,md}' --write"
+    "prettier": "prettier '**/*.{js,json,css,scss,md}' --write",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "prisma:generate": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
