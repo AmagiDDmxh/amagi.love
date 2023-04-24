@@ -16,12 +16,12 @@ const normalizeOrigin = ({ book, author }: Partial<QuoteProps>) => {
   const space = book?.startsWith('《') ? '' : ' '
   const origin = (book ? `${author}${comma}${space}${book}` : author) ?? ''
   if (origin.length > 45) {
-    const array = origin.split(',')
+    const [theAuthor, theBook] = origin.split(',')
     return (
       <div className="p-4">
-        {array[0]}
+        {theAuthor}
         <br />
-        {array[1]}
+        {theBook}
       </div>
     )
   }

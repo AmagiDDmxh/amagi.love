@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>
+    <div className="pl-2">
       <h1 className="black">About</h1>
       我的名字叫 Amagi，好奇很多东西，还在学习中。
       <p className="text-black">好奇 编译器，计算性理伦，操作系统，算法数据结构，硬件</p>

@@ -14,7 +14,7 @@ const hackerQuote = {
 const citadelleQuote = {
   author: `安东尼·圣艾修伯里(Antoine de Saint-Exupéry)`,
   book: `《城堡》(Citadelle)`,
-  content: '如果你想造船，不要召集人们去伐木，也不要给他们分配任务，只需告诉他们大海的广阔无垠。',
+  content: `如果你想造船，不要召集人们去伐木，也不要给他们分配任务，只需告诉他们大海的广阔无垠。If you want to build a ship, don't drum up the men to gather wood, divide the work and give orders. Instead, teach them to yearn for the vast and endless sea.`,
 }
 
 const fictionQuote = {
@@ -34,7 +34,7 @@ export const quotes: Prisma.QuoteCreateInput[] = [
     book: 'Standards and Mathematical Terminology',
   },
   {
-    content: `我不能创造的东西，我就没有理解。`,
+    content: `我不能创造的东西，我就没有理解。What I cannot create, I do not understand.`,
     author: '理查德·费曼(Richard Feynman)',
     reference: '写在他去世时的黑板上',
   },
@@ -52,6 +52,12 @@ export const quotes: Prisma.QuoteCreateInput[] = [
     content: '微积分是迄今为止人类智慧发明的最有力的思维武器。',
     author: '威廉·本杰明·史密斯(W. B. Smith)',
     book: '《无穷小分析》(Infinitesimal Analysis)'
+  },
+  {
+    content: `爱过却失去，总好过从未爱过。
+    ‘Tis better to have loved and lost than never to have loved at all. `,
+    author: 'Alfred Lord Tennyson (1809-1892)',
+    book: 'In Memoriam A. H. H'
   },
   // ...More
 ]
