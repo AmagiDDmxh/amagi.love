@@ -39,6 +39,11 @@ export const quotes: Prisma.QuoteCreateInput[] = [
     reference: '写在他去世时的黑板上',
   },
   {
+    content: `You have no responsibility to live up what other people think you ought to accomplish.
+    I have no responsibility to be like they expect me to be. It's their mistake, not my failing.`,
+    author: '理查德·费曼(Richard Feynman)',
+  },
+  {
     content: `数学的精髓全在于自由。`,
     author: '格奥尔格·康托尔(Georg Cantor)',
     book: '《论文集》(Gesammelte Abhandlungen)',
