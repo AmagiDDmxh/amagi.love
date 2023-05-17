@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-interface QuoteProps {
+export interface QuoteProps {
   content: string
   reference?: string
   author: string

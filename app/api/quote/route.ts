@@ -1,6 +1,15 @@
 import { Prisma } from '@prisma/client'
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { randomInteger } from '../../lib/random'
+import { randomInteger } from '../../../lib/random'
+
+// GET /api/quote
+export async function GET(req: Request) {
+  if (req.method?.toLowerCase() !== 'get') {
+    return new Response(null, { status: 501 })
+  }
+
+  const quote = data[randomInteger(0, data.length - 1)]
+  return new Response(JSON.stringify(quote), { status: 200, })
+}
 
 const hackerQuote = {
   book: 'How to Become a Hacker',
@@ -24,7 +33,7 @@ const fictionQuote = {
   reference: '戴维·福斯特·华莱士与劳瑞·麦卡弗里的谈话 - 小说和写实难以区分',
 }
 
-export const quotes: Prisma.QuoteCreateInput[] = [
+const data: Prisma.QuoteCreateInput[] = [
   hackerQuote,
   citadelleQuote,
   fictionQuote,
@@ -51,29 +60,18 @@ export const quotes: Prisma.QuoteCreateInput[] = [
   {
     content: '几行推理就能改变我们对世界的认识。',
     author: '史蒂文·兰兹伯格(Steven E. Landsburg)',
-    book: '《扶手椅中的经济学家》(The Armchair Economist)'
+    book: '《扶手椅中的经济学家》(The Armchair Economist)',
   },
   {
     content: '微积分是迄今为止人类智慧发明的最有力的思维武器。',
     author: '威廉·本杰明·史密斯(W. B. Smith)',
-    book: '《无穷小分析》(Infinitesimal Analysis)'
+    book: '《无穷小分析》(Infinitesimal Analysis)',
   },
   {
     content: `爱过却失去，总好过从未爱过。
     ‘Tis better to have loved and lost than never to have loved at all. `,
     author: 'Alfred Lord Tennyson (1809-1892)',
-    book: 'In Memoriam A. H. H'
+    book: 'In Memoriam A. H. H',
   },
   // ...More
 ]
-
-
-// GET /api/quote
-export default async function handle(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method?.toLowerCase() !== 'get') {
-    return res.status(501)
-  }
-
-  const quote = quotes[randomInteger(0, quotes.length - 1)]
-  return res.json(quote)
-}

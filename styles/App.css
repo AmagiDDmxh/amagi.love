@@ -52,15 +52,15 @@ a {
   scroll-margin: 2em;
   margin: 2em 1em 3em;
   border: 3px solid;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .card-heading {
   font-size: 1.2rem;
   /* text-transform: uppercase; */
-  padding: 0 .5em;
+  padding: 0 0.5em;
   position: absolute;
-  margin-left: -.5em;
+  margin-left: -0.5em;
   margin-top: -1.4em;
   background: white;
 }
