@@ -1,3 +1,5 @@
+'use client'
+
 import { FC } from 'react'
 
 export interface QuoteProps {
@@ -7,8 +9,13 @@ export interface QuoteProps {
   book: string
 }
 
-const trimAll = (obj: Record<string, string>): Record<string, string> => {
-  return Object.keys(obj).reduce((table, cur) => ({ ...table, [cur]: obj[cur]?.trim?.() }), {})
+const trimAllContentIf = (obj: QuoteProps): QuoteProps => {
+  if (!obj.content) {
+    return obj
+  }
+
+  const keys = Object.keys(obj) as (keyof QuoteProps)[]
+  return keys.reduce((table, cur) => ({ ...table, [cur]: obj[cur]?.trim?.() }), {} as QuoteProps)
 }
 
 const normalizeOrigin = ({ book, author }: Partial<QuoteProps>) => {
@@ -28,8 +35,8 @@ const normalizeOrigin = ({ book, author }: Partial<QuoteProps>) => {
   return origin
 }
 
-const Quote: FC<QuoteProps> = (props) => {
-  const { content, author, reference, book } = props.content ? trimAll((props as any) as Record<string, string>) : props
+const Quote = (props: QuoteProps) => {
+  const { content, author, reference, book } = trimAllContentIf(props)
   const origin = normalizeOrigin({ book, author })
 
   return (
