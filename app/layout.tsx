@@ -1,6 +1,7 @@
 import '#/styles/globals.css'
 import Header from '#/components/Header'
-import Quote, { QuoteProps } from '#/components/Quote'
+import Quote from '#/components/Quote'
+import { type Quote as QuoteType } from '#/typings/quote'
 import { notFound } from 'next/navigation'
 import { getBaseUrl } from '#/lib/getBaseUrl'
 
@@ -31,7 +32,7 @@ async function getQuoteProps() {
     throw new Error('Something went wrong!')
   }
 
-  const quoteProps = (await res.json()) as QuoteProps
+  const quoteProps = (await res.json()) as QuoteType
 
   if (!quoteProps) {
     // Render the closest `not-found.js` Error Boundary

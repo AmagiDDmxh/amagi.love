@@ -1,4 +1,4 @@
-import { Prisma } from '@prisma/client'
+import { Quote } from '#/typings/quote'
 import { randomInteger } from '../../../lib/random'
 
 // GET /api/quote
@@ -33,7 +33,7 @@ const fictionQuote = {
   reference: '戴维·福斯特·华莱士与劳瑞·麦卡弗里的谈话 - 小说和写实难以区分',
 }
 
-const data: Prisma.QuoteCreateInput[] = [
+const data: Quote[] = [
   hackerQuote,
   citadelleQuote,
   fictionQuote,

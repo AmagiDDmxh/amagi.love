@@ -1,24 +1,16 @@
 'use client'
+import { type Quote as QuoteType } from '#/typings/quote'
 
-import { FC } from 'react'
-
-export interface QuoteProps {
-  content: string
-  reference?: string
-  author: string
-  book: string
-}
-
-const trimAllContentIf = (obj: QuoteProps): QuoteProps => {
+const trimAllContentIf = (obj: QuoteType): QuoteType => {
   if (!obj.content) {
     return obj
   }
 
-  const keys = Object.keys(obj) as (keyof QuoteProps)[]
-  return keys.reduce((table, cur) => ({ ...table, [cur]: obj[cur]?.trim?.() }), {} as QuoteProps)
+  const keys = Object.keys(obj) as (keyof QuoteType)[]
+  return keys.reduce((table, cur) => ({ ...table, [cur]: obj[cur]?.trim?.() }), {} as QuoteType)
 }
 
-const normalizeOrigin = ({ book, author }: Partial<QuoteProps>) => {
+const normalizeOrigin = ({ book, author }: Partial<QuoteType>) => {
   const comma = book ? ',' : ''
   const space = book?.startsWith('《') ? '' : ' '
   const origin = (book ? `${author}${comma}${space}${book}` : author) ?? ''
@@ -35,7 +27,7 @@ const normalizeOrigin = ({ book, author }: Partial<QuoteProps>) => {
   return origin
 }
 
-const Quote = (props: QuoteProps) => {
+const Quote = (props: QuoteType) => {
   const { content, author, reference, book } = trimAllContentIf(props)
   const origin = normalizeOrigin({ book, author })
 

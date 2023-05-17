@@ -1,3 +1,5 @@
 import { cache } from 'react'
 
-export const getBaseUrl = cache(() => process.env.VERCEL_URL ?? `http://localhost:${process.env.PORT ?? 3001}`)
+export const getBaseUrl = cache(() =>
+  process.env.VERCEL_URL ? 'https://amagi.love' : `http://localhost:${process.env.PORT ?? 3000}`,
+)

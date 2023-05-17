@@ -14,7 +14,7 @@ interface Week {
 
 interface StatData {
   contributionCount: number
-  date: string
+  date: number
 }
 
 // GET /api/contributions
@@ -37,25 +37,17 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
   // let base = works[0].contributionCount > 0 ? 1 : -10
   const average = works.reduce((acc, { contributionCount }) => acc + contributionCount, 0) / works.length
   const around = 7
-  for (let i = works.length -183; i < works.length - around; i++) {
+  for (let i = works.length - 183; i < works.length - around; i++) {
     const work = works[i]
     const recentAverage = getRecentAverage(works, i, around)
     const { contributionCount: currVal, date } = work
-    // const division = prevVal === 0 ? 1 : prevVal
-
-    // const uv = (currVal / prevVal) ** (1 / (currLength - 1))
-    // growth = (currVal - growth) / growth
-    // const uv = currVal / prevVal - 1
 
     normalizedWorks.push({
       date,
       currVal,
       recentAverage,
       average,
-      // uv,
-      // uv: currVal - prevVal,
-      // uv: growth,
-      uv: (currVal - recentAverage),
+      uv: currVal - recentAverage,
     })
   }
   res.json({ data: normalizedWorks, total, average })
@@ -100,6 +92,17 @@ async function getContributions(token = GITHUB_TOKEN, username = GITHUB_USERNAME
     body: JSON.stringify(body),
     headers: headers,
   })
-  const data = await response.json()
-  return data
+  const json = (await response.json()) as {
+    data: {
+      user: {
+        contributionsCollection: {
+          contributionCalendar: {
+            totalContributions: number
+            weeks: Week[]
+          }
+        }
+      }
+    }
+  }
+  return json
 }

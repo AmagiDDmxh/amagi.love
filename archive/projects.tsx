@@ -8,7 +8,7 @@ const posts = [
     description: (
       <ul>
         <li>Codebases are detail agnostic, we need more info about which project it is</li>
-        <li>What if I can know which codebase I'm working on or editing</li>
+        <li>What if I can know which codebase I&apos;m working on or editing</li>
       </ul>
     ),
     date: 'Mar 16, 2020',

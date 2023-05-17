@@ -1,12 +1,12 @@
-import { FC } from 'react'
+import { PropsWithChildren } from 'react'
 
 export type Placement = 'center' | 'left' | 'right'
 
-export interface DividerProps {
+export type DividerProps = {
   placement?: Placement
 }
 
-const Divider: FC<DividerProps> = ({ placement = 'center', children }) => {
+const Divider = ({ placement = 'center', children }: PropsWithChildren<DividerProps>) => {
   const placements = {
     center: 'justify-center',
     left: 'justify-start',
