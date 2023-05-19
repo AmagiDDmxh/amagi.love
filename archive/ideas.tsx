@@ -67,7 +67,7 @@ const Card = ({ title, description, status, link }: CardProps) => (
 );
 
 const renderCards = (cards: CardProps[]) => {
-  return cards.map((props) => <Card key={props.title} {...props} />);
+  return cards.map((props) => <Card key={`idea ${props.title}`} {...props} />);
 };
 
 const Ideas = () => {

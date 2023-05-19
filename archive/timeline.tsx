@@ -10,9 +10,9 @@ const renderTimelines = (timelines: ITimeline[]) =>
     const dateString = moment(date).format('YYYY-MM-DD')
 
     return (
-      <li key={date.toString()}>
+      <li key={`time ${date.toString()}`}>
         <span>{dateString}</span>
-        {Array.isArray(descriptions) ? descriptions.map((t) => <p key={t}>{t}</p>) : <p>{descriptions}</p>}
+        {Array.isArray(descriptions) ? descriptions.map((t) => <p key={`desc ${t}`}>{t}</p>) : <p>{descriptions}</p>}
       </li>
     )
   })
