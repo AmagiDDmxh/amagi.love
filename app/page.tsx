@@ -3,8 +3,7 @@ import { getBaseUrl } from '#/lib/getBaseUrl'
 import { type Quote as QuoteType } from '#/typings/quote'
 
 export default async function HomePage() {
-  const quoteResponse = await fetch(`${getBaseUrl()}/api/quote`, { next: { revalidate: 10 } })
-  const quote = (await quoteResponse.json()) as QuoteType
+  const quote = (await fetch(`${getBaseUrl()}/api/quote`, { cache: 'no-store' }).then((x) => x.json())) as QuoteType
 
   return (
     <>
