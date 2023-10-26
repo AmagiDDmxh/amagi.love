@@ -1,11 +1,10 @@
-'use client'
-
 import Quote from '#/components/Quote'
+import { getBaseUrl } from '#/lib/getBaseUrl'
 import { type Quote as QuoteType } from '#/typings/quote'
-import useSWR from 'swr'
 
-export default function HomePage() {
-  const { data: quote } = useSWR<QuoteType>('/api/quote')
+export default async function HomePage() {
+  const quoteResponse = await fetch(`${getBaseUrl()}/api/quote`, { next: { revalidate: 10 } })
+  const quote = (await quoteResponse.json()) as QuoteType
 
   return (
     <>

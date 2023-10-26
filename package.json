@@ -38,7 +38,7 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 7000",
     "start": "next start",
     "build": "next build",
     "prettier": "prettier '**/*.{js,json,css,scss,md}' --write"
